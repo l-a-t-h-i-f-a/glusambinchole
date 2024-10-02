@@ -1,0 +1,7 @@
+{
+  "name": "gulcosense",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
