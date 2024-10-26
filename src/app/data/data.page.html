@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="atas">
+    <div class="header">
+      <a [routerLink]="['/tabs/home']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background">
+  <div class="header">
+    <h1>Lengkapi Data</h1>
+  </div>
+  <div class="kotak">
+    <div class="avatar-container">
+      <img src="assets/img/aku.jpg" alt="User Avatar" class="avatar">
+      <img src="assets/img/kamera.svg" class="icon">
+    </div>
+    
+    <div class="form" >
+      <ion-item class="input">
+      <ion-label class="label" position="floating">Username</ion-label>
+      <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item class="input">
+        <ion-label class="label" position="floating">Nama Lengkap</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item class="input">
+        <ion-label class="label" position="floating">Umur</ion-label>
+        <ion-input type="number" ></ion-input>
+      </ion-item>
+      <ion-item class="input">
+        <ion-label class="label" position="floating">Jenis Kelamin</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item class="input">
+        <ion-label class="label" position="floating">Tinggi Badan</ion-label>
+        <ion-input type="number" ></ion-input>
+      </ion-item>
+      <ion-item class="input">
+        <ion-label class="label" position="floating">Berat Badan</ion-label>
+        <ion-input type="number" ></ion-input>
+      </ion-item>
+    </div>
+  </div>
+  <ion-button>Enter</ion-button>
+</ion-content>

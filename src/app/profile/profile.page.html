@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="atas">
+    <div class="header">
+      <a [routerLink]="['/tabs/home']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="kotak-abu"></div>
+  <div class="header">
+    <h1>My Page</h1>
+  </div>
+
+  <div class="profile-info">
+    <img src="assets/img/aku.jpg" alt="Profile Picture" class="avatar">
+    <h2>{{ user }}</h2>
+    <p>Nama Lengkap</p>
+    <p class="details">29 Tahun 74kg / 189cm</p>
+    <p class="gabung">Bergabung Sejak 17 September 2024</p>
+  </div>
+
+  <div class="account-section">
+    <h3>Akun</h3>
+      <ion-list [inset]="true" class="card">
+        <ion-item button class="label" [routerLink]="['/gantipw']">
+          <ion-label>Ganti Password</ion-label>
+        </ion-item>
+        <ion-item button class="item" [routerLink]="['/bantuan']">
+          <ion-label>Bantuan & Dukungan</ion-label>
+        </ion-item>
+      </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" button (click)="presentAlert()">
+        <ion-label>Keluar</ion-label> 
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+

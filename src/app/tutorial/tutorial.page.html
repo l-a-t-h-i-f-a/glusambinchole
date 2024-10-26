@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="atas">
+    <div class="header">
+      <a [routerLink]="['/bantuan']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="header">
+    <h1>Tutorial Penggunaan</h1>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(0)">
+        <ion-label>Cara memulai pemeriksaan kesehatan</ion-label> 
+      </ion-item>
+        <ion-list [inset]="true" *ngIf="showDescription[0]">
+          <ion-item button class="item" >
+            <ion-label>1. Hubungkan perangkat dengan alat gulcosense melalui <i>bluetooth pairing</i></ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>2. Memasukkan jari pada alat</ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>3. Menunggu hasil pemeriksaan</ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>4. Cek hasil di halaman <i>Result Data</i></ion-label>
+          </ion-item>
+        </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(1)">
+        <ion-label>Cara melihat riwayat hasil pemeriksaan</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[1]">
+        <ion-item button class="item" >
+          <ion-label>1. Pergi ke <i>Home</i></ion-label>
+        </ion-item>
+        <ion-item button class="item" >
+          <ion-label>2. Tekan <i>Recent Data</i> ditujukan ke halaman <i>History</i></ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(2)">
+        <ion-label>Cara mendapatkan saran dari AI</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[2]">
+        <ion-item button class="item" >
+          <ion-label>Setelah melakukan tes, 
+            Saran AI akan muncul pada tiap parameter unutk memberi saran pada pengguna</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(3)">
+        <ion-label>Cara mengedit profil atau mengubah pengaturan akun</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[3]">
+        <ion-item button class="item" >
+          <ion-label>1. Pergi ke <i>Home</i></ion-label>
+        </ion-item>
+        <ion-item button class="item" >
+          <ion-label>2. Tekan icon profil di pojok kanan atas</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+</ion-content>

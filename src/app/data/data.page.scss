@@ -1,0 +1,120 @@
+.background {
+  --background: #F2F5FA; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: -20px;
+}
+.atas{
+  --background: #F2F5FA !important; 
+  --border-width: none;
+  --ion-border-color: transparent !important;
+}
+
+ion-header{
+  box-shadow: none;
+  --border-width: none;
+  --ion-border-color: transparent !important;
+}
+.header ion-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: #5C5C5C;
+  padding-left: 13px;
+  padding-top: 20px;
+}
+
+.header h1 {
+  flex: 1;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  padding-right: 30px;
+  color: #5C5C5C;
+  font-weight: bold;
+}
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-60px);
+    margin-left: 90px;
+    display: block;
+  }
+
+  .avatar-container {
+    position: relative;  
+    display: inline-block; 
+  }
+  .icon {
+    position: absolute;
+    top: 8px;            
+    left: 5px;          
+    font-size: 24px;     
+    color: white;        
+    background-color: #208EC0;  
+    border-radius: 50%; 
+    margin-left: 155px;
+    width: 30px;
+    height: auto;
+}
+  .header img{
+    padding-left: 10px;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info span {
+    margin-right: 10px;
+    padding-right: 5px;
+    color: #928A8A;
+  }
+ .user-info a{
+    text-decoration: none;
+ }
+  
+  .kotak {
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px 0 20px;
+    font-size: 13px;
+  }
+  
+  .input{
+    --background:transparant;
+    color: #7D7A7A;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.label{
+    font-size: 13px;
+    color: #7D7A7A;
+}
+ion-button{
+    --background: #208EC0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 130px;
+    padding-right: 130px;
+}

@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="background">
+    <img src="assets/img/glusam.png" class="logo">
+    <ion-text>Alat Pengukur Gula Darah, Asam Urat</ion-text>
+    <ion-text>Hemoglobin dan Kolestrol</ion-text>  
+    <p>REGISTRASI</p>
+    <div class="form" [formGroup]="regForm" novalidate>
+      <ion-item class="input">
+        <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+      </ion-item>
+      <div *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid">
+        <ion-text *ngIf="errorControl.email.errors?.required">
+          Email is required
+        </ion-text>
+        <ion-text *ngIf="errorControl.email.errors?.pattern">
+          Email should be valid
+        </ion-text>
+      </div>
+      <ion-item class="input">
+        <ion-input 
+          formControlName="password" 
+          [type]="showPassword ? 'text' : 'password'" 
+          placeholder="Password">
+        </ion-input>
+        <ion-icon 
+          [name]="showPassword ? 'eye' : 'eye-off'" 
+          slot="end" 
+          (click)="togglePasswordVisibility()" 
+          class="eye-icon">
+        </ion-icon>
+      </ion-item>
+      
+      <div *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid">
+        <ion-text *ngIf="errorControl.password.errors?.required">
+          Password is required
+        </ion-text>
+        <ion-text *ngIf="errorControl.password.errors?.pattern">
+          Password must have at least One Character
+          One Capital Letter One Number Contain 8 digit
+        </ion-text>
+      </div>
+    </div>
+    
+    <div class="sign">
+      <ion-button button class="sign-in-button" (click)="registerUser()">
+        Sign Up
+      </ion-button>
+    </div>
+    <div class="akun">
+      <p>Sudah punya akun? <a routerLink="/login">Log In</a></p>
+    </div>
+  </div>
+</ion-content>

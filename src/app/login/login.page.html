@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="background">
+    <img src="assets/img/glusam.png" class="logo">
+    <ion-text>Alat Pengukur Gula Darah, Asam Urat</ion-text>
+    <ion-text>Hemoglobin dan Kolestrol</ion-text>
+    <p>LOGIN</p>
+    <div class="form" [formGroup]="loginForm" novalidate>
+      <ion-item class="input">
+        <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+      </ion-item>
+      <div *ngIf="this.loginForm.controls?.['email'].touched && this.loginForm.controls?.['email'].invalid">
+        <ion-text *ngIf="errorControl.email.errors?.required">
+          Email is required
+        </ion-text>
+        <ion-text *ngIf="errorControl.email.errors?.pattern">
+          Email should be valid
+        </ion-text>
+      </div>
+      <ion-item class="input">
+        <ion-input 
+          formControlName="password" 
+          [type]="showPassword ? 'text' : 'password'" 
+          placeholder="Password">
+        </ion-input>
+        <ion-icon 
+          [name]="showPassword ? 'eye' : 'eye-off'" 
+          slot="end" 
+          (click)="togglePasswordVisibility()" 
+          class="eye-icon">
+        </ion-icon>
+      </ion-item>
+      <div *ngIf="this.loginForm.controls?.['password'].touched && this.loginForm.controls?.['password'].invalid">
+        <ion-text *ngIf="errorControl.password.errors?.required">
+          Password is required
+        </ion-text>
+        <ion-text *ngIf="errorControl.password.errors?.pattern">
+          Password must have at least One Character
+          One Capital Letter One Number Contain 8 digit
+        </ion-text>
+      </div>
+    </div>
+    
+    <div class="sign">
+      <ion-button  class="sign-in-button" (click)="loginUser()">
+        Login
+      </ion-button>
+    </div>
+    <div class="akun">
+      <ion-text>Belum punya akun? <a [routerLink]="['/register']">Sign Up</a></ion-text><br>
+      <ion-text>Lupa Password? <a [routerLink]="['/lupapw']">Klik disini</a></ion-text>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,84 @@
+.background {
+    background-image:  url('/assets/img/bg.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-color: #ffffff;
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+ion-text{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.background p{
+    padding-top: 90px;
+    font-size: 25px;
+    color: #1D3557;
+    font-family: 'poppins' ;
+}
+.logo {
+    width: 30%; 
+    height: auto; 
+    margin-top: 130px;
+  }
+.sign {
+    width: 60%;
+    height: 60%;
+    gap : 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+ion-button{
+    padding: 10px 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sign-in-button, .sign-up-button {
+    --background: #208EC0; 
+    --color: #ffffff; 
+    --border-radius: 15px; 
+    text-transform: none;
+    padding: 2px;
+    font-size: 20px;
+}
+.akun{
+ text-align: center; 
+  position: relative;
+  top: -50px; 
+ 
+}
+
+.akun a {
+  color: #6193B5; 
+}
+.akun ion-text{
+    color: #6193B5;
+    font-size: 17px;
+}
+.input{
+    --background:transparant;
+    cursor: text;
+    color: #696b6b;
+}
+.form{
+    padding-top: 20px;
+    
+}
+.text{
+    padding-top: 20px;
+}
+.eye-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #6b6b6b;
+    margin-left: 8px;
+  }
+  

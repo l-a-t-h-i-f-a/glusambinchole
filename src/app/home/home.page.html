@@ -1,20 +1,78 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="background">
+  <div class="top-bar">
+    <div class="notification">
+      <a [routerLink]="['/notifikasi']">
+      <img src="assets/img/bell.svg"></a>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="user-info">
+      <span>Hello, User!</span>
+      <a [routerLink]="['/profile']">
+        <img src="assets/img/aku.jpg" alt="User Avatar" class="avatar">
+      </a>
+    </div>
   </div>
-</ion-content>
+
+  <div class="kotak">
+    <p>Recent Data</p>
+    <div class="data-item">
+      <span class="data-name">Glucose</span>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+        <span class="status">High</span>
+      </div>
+    </div>
+    <div class="data-item">
+      <span class="data-name">Cholesterol</span>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+        <span class="status">Normal</span>
+      </div>
+    </div>
+    <div class="data-item">
+      <span class="data-name">Uric Acid</span>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%;"></div>
+        </div>
+        <span class="status">Normal</span>
+      </div>
+    </div>
+    <div class="data-item">
+      <span class="data-name">Hemoglobin</span>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 30%;"></div>
+        </div>
+        <span class="status">Normal</span>
+      </div>
+    </div>
+</div>
+
+
+  <div class="weekly-average">
+    <p>Weekly Average</p>
+    <div class="average-container">
+      <div class="average-box">
+        <span class="atas">0</span>
+        <span class="bawah">mg/dl</span>
+      </div>
+      <div class="average-box">
+        <span class="atas">0</span>
+        <span class="bawah">mg/dl</span>
+      </div>
+      <div class="average-box">
+        <span class="atas">0</span>
+        <span class="bawah">mg/dl</span>
+      </div>
+      <div class="average-box">
+        <span class="atas">0</span>
+        <span class="bawah">mg/dl</span>
+      </div>
+    </div>
+  </div>
+  </ion-content>

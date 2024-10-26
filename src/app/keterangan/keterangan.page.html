@@ -1,0 +1,42 @@
+<ion-content class="background">
+  <div class="top-bar">
+    <div class="notification">
+      <a [routerLink]="['/profile']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+    </div>
+  </div>
+
+  <ion-text>
+    Keterangan
+  </ion-text>
+  <div class="health-status">
+    <div class="left-content">
+        <img src="assets/img/heart.svg" alt="Heart">
+    </div>
+    <div class="right-content">
+        <ion-label class="stakes">Status Kesehatan</ion-label>
+        <p class="status">Normal</p>
+    </div>   
+</div>
+
+  <div class="bawah">
+    <div class="left-content">
+        <img src="assets/img/heart-kuning.svg" alt="Heart">
+    </div>
+    <div class="right-content">
+        <ion-label class="stakes">Status Kesehatan</ion-label>
+        <p class="status">Perlu Diperhatikan</p>
+    </div>   
+  </div>
+  <div class="bawah">
+    <div class="left-content">
+        <img src="assets/img/heart-merah.svg" alt="Heart">
+    </div>
+    <div class="right-content">
+        <ion-label class="stakes">Status Kesehatan</ion-label>
+        <p class="status">Waspada</p>
+    </div>   
+</div>
+  
+</ion-content>

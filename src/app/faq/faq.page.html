@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="atas">
+    <div class="header">
+      <a [routerLink]="['/bantuan']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="header">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+  
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(0)">
+        <ion-label>Bagaimana cara menghubungkan perangkat ke aplikasi via Bluetooth?</ion-label> 
+      </ion-item>
+        <ion-list [inset]="true" *ngIf="showDescription[0]">
+          <ion-item button class="item" >
+            <ion-label>1. Hidupkan Bluetooth pada handphone anda</ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>2. Cari perangkat bluetooth yang tersedia</ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>3. Setelah terdeteksi, pilih perangkat dari daftar perangkat yang tersedia</ion-label>
+          </ion-item>
+          <ion-item button class="item" >
+            <ion-label>4. Setelah dipilih, aplikasi akan membuat koneksi dengan perangkat yang tersedia</ion-label>
+          </ion-item>
+        </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(1)">
+        <ion-label>Bagaimana cara membaca hasil pemeriksaan?</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[1]">
+        <ion-item button class="item" >
+          <ion-label>Ketika sudah melakukan pemeriksaan, maka hasil akan tampil di halaman Result Data.
+            Terdapat Grafik yang menjelaskan setiap parameter </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(2)">
+        <ion-label>Apa arti dari hasil Glukosa, Kolesterol, dan Asam Urat?</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[2]">
+        <ion-item button class="item" >
+          <ion-label>Hasil dari tiap pengguna melakukan pemeriksaan atau tes pada 
+            aplikasi yang menunjukkan nilai dari Glukosa, Kolesterol, dan Asam Urat pengguna</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+</ion-content>

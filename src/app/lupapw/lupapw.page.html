@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ats">
+    <ion-buttons slot="start">
+      <div class="header">
+        <a [routerLink]="['/tabs/home']">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="header">
+    <h1>Lupa Password</h1>
+  </div>
+  <div>
+    <h2 class="tittle">Lupa kata sandi</h2>
+    <p class="text">Tautan pengaturan ulang kata sandi akan dikirimkan ke alamat email anda</p>
+  </div>
+  <div class="form" [formGroup]="resetForm" novalidate>
+    <ion-item class="input" >
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ></ion-input>
+    </ion-item>
+    <div *ngIf="errorControl['email'].touched && errorControl['email'].invalid">
+      <ion-text *ngIf="errorControl['email'].touched && errorControl['email'].invalid">
+        Email is required.</ion-text>
+      <ion-text *ngIf="errorControl['email'].errors?.email">
+        Masukkan email yang valid</ion-text>
+    </div>
+   <div class="sign">
+      <ion-button button class="sign-in-button" (click)="resetPassword()">
+        Kirim
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

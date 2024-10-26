@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="atas">
+    <div class="header">
+      <a [routerLink]="['/tabs/home']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="header">
+    <h1>Bantuan & Dukungan</h1>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(0)">
+        <ion-label>Pusat Bantuan</ion-label> 
+      </ion-item>
+        <ion-list [inset]="true" *ngIf="showDescription[0]">
+          <ion-item button class="label" [routerLink]="['/faq']">
+            <ion-label>FAQ</ion-label>
+          </ion-item>
+          <ion-item button class="item" [routerLink]="['/tutorial']">
+            <ion-label>Tutorial Penggunaan</ion-label>
+          </ion-item>
+        </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(1)">
+        <ion-label>Hubungi Kami</ion-label> 
+      </ion-item>
+          <ion-list [inset]="true" *ngIf="showDescription[1]">
+            <ion-item button class="label" >
+              <ion-label>Live Chat</ion-label>
+            </ion-item>
+            <ion-item button class="item" [routerLink]="['/bantuan']">
+              <ion-label>Send Mail</ion-label>
+            </ion-item>
+          </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(2)">
+        <ion-label>Feedback Pengguna</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[2]">
+        <ion-item button class="item" >
+          <ion-label>Rate Us</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" (click)="toggleDescription(3)">
+        <ion-label>Panduan Troubleshooting</ion-label> 
+      </ion-item>
+      <ion-list [inset]="true" *ngIf="showDescription[3]">
+        <ion-item button class="item" >
+          <ion-label>1. Periksa apakah perangkat anda sudah dipairing</ion-label>
+        </ion-item>
+        <ion-item button class="item" >
+          <ion-label>2. Pastikan Bluetooth pada perangkat aktif</ion-label>
+        </ion-item>
+        <ion-item button class="item" >
+          <ion-label>3. Restart perangkat jika terjadi gangguan koneksi</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+  <div class="account-section">
+    <ion-list [inset]="true" class="card">
+      <ion-item class="item" [routerLink]="['/kebijakan']">
+        <ion-label>Kebijakan & Syarat</ion-label> 
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

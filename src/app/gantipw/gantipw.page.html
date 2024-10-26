@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ats">
+    <ion-buttons slot="start">
+      <div class="header">
+        <a [routerLink]="['/tabs/home']">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="header">
+    <h1>Lupa Password</h1>
+  </div>
+  <div>
+    <h2 class="tittle">Ubah kata sandi</h2>
+    <p class="text">Kata sandi anda harus paling tidak 8 karakter dan harus menyertakan kombinasi angka, huruf, dan karakter khusus</p>
+  </div>
+  <div class="form" [formGroup]="passwordForm" novalidate>
+    <ion-item class="input">
+      <ion-label position="floating">Old Password</ion-label>
+      <ion-input type="password" formControlName="oldPassword"></ion-input>
+    </ion-item>
+    <div *ngIf="errorControl['oldPassword'].touched && errorControl['oldPassword'].invalid">
+      <ion-text *ngIf="errorControl['oldPassword'].errors?.required">Old Password is required.</ion-text>
+    </div>
+
+    <ion-item class="input">
+      <ion-label position="floating">New Password</ion-label>
+      <ion-input type="password" formControlName="newPassword"></ion-input>
+    </ion-item>
+    <div *ngIf="errorControl['newPassword'].touched && errorControl['newPassword'].invalid">
+      <ion-text *ngIf="errorControl['newPassword'].errors?.required">New Password is required.</ion-text>
+      <ion-text *ngIf="errorControl['newPassword'].errors?.minlength">Password must be at least 8 characters long.</ion-text>
+    </div>
+
+    <ion-item class="input">
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+    <div *ngIf="errorControl['confirmPassword'].touched && errorControl['confirmPassword'].invalid">
+      <ion-text *ngIf="errorControl['confirmPassword'].errors?.required">Confirm Password is required.</ion-text>
+    </div>
+
+    <div>
+      <p>
+        <a class="lupasandi" routerLink="/lupapw">Lupa kata sandi?</a>
+      </p>
+    </div>
+   <div class="sign">
+      <ion-button button class="sign-in-button" (click)="changePassword()">
+        Ubah kata sandi
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,67 @@
+.background {
+  --background: #F2F5FA; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: -20px;
+}
+.atas{
+  --background: #F2F5FA !important; 
+  --border-width: none;
+  --ion-border-color: transparent !important;
+}
+
+ion-header{
+  box-shadow: none;
+  --border-width: none;
+  --ion-border-color: transparent !important;
+}
+.header ion-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: #5C5C5C;
+  padding-left: 13px;
+  padding-top: 25px;
+}
+
+.bijak{
+  flex: 1;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  padding-right: 30px;
+  color: #5C5C5C;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.guna {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  padding-right: 30px;
+  color: #5C5C5C;
+  font-weight: bold;
+}
+  .judul h1{
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #5C5C5C;
+    font-weight: bold;
+  }
+  .paragraf p{
+    color: black;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    text-align: justify;
+  }

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ats">
+    <ion-buttons slot="start">
+      <div class="header">
+        <a [routerLink]="['/tabs/home']">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <div class="header">
+        <span>Hello, User!</span>
+        <a [routerLink]="['/profile']">
+          <img src="assets/img/aku.jpg" alt="User Avatar" class="avatar">
+        </a>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+    <ion-card-content class="atas">
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+    <ion-card-content class="bawah">
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+    <ion-card-content class="bawah">
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+
+</ion-content>
