@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" class="baratas">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <a [routerLink]="['/notifikasi']">
+        <ion-icon name="notifications-outline" class="custom-icon"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <span style="margin-top: 20px; font-family: 'Poppins';">Halo, User!</span>
+        <a [routerLink]="['/profile']">
+        <ion-icon name="person-circle-outline" class="custom-icon"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="history-container">
+    <ion-card>
+      <ion-card-content class="outer-card-content">
+        <div class="date-filter">
+          <ion-button fill="clear" (click)="toggleDatePicker()">
+            <ion-icon name="calendar" slot="end">{{ selectedDate ? (selectedDate | date: 'EEE, d MMM yyyy') : 'Select Date' }}</ion-icon>
+            <span>
+              
+            </span>
+          </ion-button>
+          <div *ngIf="showDatePicker">
+            <ion-datetime display-format="EEE, d MMM yyyy" [(ngModel)]="selectedDate"></ion-datetime>
+          </div>
+        </div>
+
+        <!-- History List with Scroll -->
+        <div class="history-list">
+          <div *ngFor="let item of filteredHistory" class="history-item">
+            <div>{{ item.date | date: 'EEE, d MMM' }}</div>
+            <div class="details">
+              <div class="item" *ngFor="let detail of item.details">
+                <span>{{ detail.name }}</span>
+                <ion-progress-bar [value]="detail.value" [color]="getBarColor(detail.status)"></ion-progress-bar>
+                <span>{{ detail.status }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- No history message -->
+          <div *ngIf="!filteredHistory.length" class="no-history">
+            No history available
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

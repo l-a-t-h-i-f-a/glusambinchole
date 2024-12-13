@@ -1,42 +1,54 @@
-<ion-content class="background">
-  <div class="top-bar">
-    <div class="notification">
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-row>
       <a [routerLink]="['/profile']">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-        </a>
-    </div>
+      <img src="assets/icon/arrow-left.png" alt="" ></a>
+      <ion-card-title style="margin-left: 110px; margin-right: 110px; color: white ; font-size: medium;">Keterangan</ion-card-title>
+    </ion-row>
   </div>
+  <ion-grid class>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="status-card normal" style="margin-top: 20px;">
+          <ion-card-content>
+            <ion-item lines="none" class="card-item">
+              <img src="assets/icon/hijaubesar.png" slot="start" alt="">
+              <ion-label>
+                <h2>Status Kesehatan</h2>
+                <h3>Normal</h3>
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <ion-text>
-    Keterangan
-  </ion-text>
-  <div class="health-status">
-    <div class="left-content">
-        <img src="assets/img/heart.svg" alt="Heart">
-    </div>
-    <div class="right-content">
-        <ion-label class="stakes">Status Kesehatan</ion-label>
-        <p class="status">Normal</p>
-    </div>   
-</div>
+      <ion-col size="12">
+        <ion-card class="status-card attention">
+          <ion-card-content>
+            <ion-item lines="none" class="card-item">
+              <img src="assets/icon/kuningbesar.png" slot="start" alt="">
+              <ion-label>
+                <h2>Status Kesehatan</h2>
+                <h3>Perlu Diperhatikan</h3>
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <div class="bawah">
-    <div class="left-content">
-        <img src="assets/img/heart-kuning.svg" alt="Heart">
-    </div>
-    <div class="right-content">
-        <ion-label class="stakes">Status Kesehatan</ion-label>
-        <p class="status">Perlu Diperhatikan</p>
-    </div>   
-  </div>
-  <div class="bawah">
-    <div class="left-content">
-        <img src="assets/img/heart-merah.svg" alt="Heart">
-    </div>
-    <div class="right-content">
-        <ion-label class="stakes">Status Kesehatan</ion-label>
-        <p class="status">Waspada</p>
-    </div>   
-</div>
-  
+      <ion-col size="12">
+        <ion-card class="status-card warning">
+          <ion-card-content>
+            <ion-item lines="none" class="card-item">
+              <img src="assets/icon/merahbesar.png" slot="start" alt="">
+              <ion-label>
+                <h2>Status Kesehatan</h2>
+                <h3>Waspada</h3>
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

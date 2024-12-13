@@ -68,6 +68,18 @@ const routes: Routes = [
     path: 'lupapw',
     loadChildren: () => import('./lupapw/lupapw.module').then( m => m.LupapwPageModule)
   },
+  {
+    path: 'diagnose',
+    loadChildren: () => import('./diagnose/diagnose.module').then( m => m.DiagnosePageModule)
+  },
+  {
+    path: 'form',
+    loadChildren: () => import('./form/form.module').then( m => m.FormPageModule)
+  },
+ 
+
+  
+
 ];
 
 @NgModule({

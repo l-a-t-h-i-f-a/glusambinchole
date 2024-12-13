@@ -2,7 +2,7 @@
     background-image:  url('/assets/img/bg.png');
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 450px;
+    background-size: 370px;
     background-color: #ffffff;
     height: 100vh; 
     display: flex; 
@@ -17,7 +17,7 @@ ion-text{
     margin-top: 5px;
 }
 .background p{
-    padding-top: 90px;
+    padding-top: 70px;
     font-size: 25px;
     color: #1D3557;
     font-family: 'poppins' ;
@@ -52,7 +52,7 @@ ion-button{
 .akun{
  text-align: center; 
   position: relative;
-  top: -50px; 
+  top: -70px; 
  
 }
 
@@ -82,3 +82,7 @@ ion-button{
     margin-left: 8px;
   }
   
+.akun p{
+    color: #6193B5;
+    font-size: 18px;
+}
